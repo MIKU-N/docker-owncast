@@ -15,12 +15,12 @@ cd docer-owncast
 docker buildx build -t test/owncast-test  .
 ```
 
-## Docker-Compose
+## Or used Docker-Compose from dockerhub
 
 ```
 services:
   owncast:
-    image: test/owncast-test
+    image: miku114514
     container_name: owncast
     environment:
       - UID=0
