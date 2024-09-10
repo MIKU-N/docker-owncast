@@ -1,3 +1,47 @@
+# This Project was work for ubuntu 22.04 HWE
+
+The origin project has some device error,I fix it and upgrade some software for AMD 680M
+
+It's work success in AMD 6800H
+
+Just git clone this project and docker build it.
+
+> Before use that,you need install AMD Linux® Drivers for AMD Radeon™ and Radeon PRO™ Graphics
+> See https://www.amd.com/EN/support/download/linux-drivers.html
+
+```
+git clone https://github.com/MIKU-N/docker-owncast.git
+cd docer-owncast
+docker buildx build -t test/owncast-test  .
+```
+
+## Docker-Compose
+
+```
+services:
+  owncast:
+    image: test/owncast-test
+    container_name: owncast
+    environment:
+      - UID=0
+      - GID=0
+      - TZ=Asia/Shanghai
+      - OWNCAST_V=latest
+      - UMASK=0000
+      - DATA_PERM=770
+    volumes:
+      - /your_data_folder/owncast:/owncast
+    ports:
+      - 8089:8080
+      - 1935:1935 #optional
+    devices:
+      - /dev/dri:/dev/dri #optional
+    restart: unless-stopped
+```
+
+
+
+
 # Owncast in Docker optimized for Unraid
 Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software.
 
