@@ -15,7 +15,7 @@ cd docer-owncast
 docker buildx build -t test/owncast-test  .
 ```
 
-## Or used Docker-Compose from dockerhub
+## Or Used Docker-Compose from Docker Hub
 
 ```
 services:
