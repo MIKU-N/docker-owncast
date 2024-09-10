@@ -20,7 +20,7 @@ docker buildx build -t test/owncast-test  .
 ```
 services:
   owncast:
-    image: miku114514
+    image: miku114514/docker-owncast:master
     container_name: owncast
     environment:
       - UID=0
