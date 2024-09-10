@@ -6,7 +6,7 @@ It's work success in AMD 6800H
 
 Just git clone this project and docker build it.
 
-> Before use that,you need install AMD Linux® Drivers for AMD Radeon™ and Radeon PRO™ Graphics
+> Before use that,you need install AMD Linux® Drivers for AMD Radeon™ and Radeon PRO™ Graphics  
 > See https://www.amd.com/EN/support/download/linux-drivers.html
 
 ```
