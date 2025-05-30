@@ -1,4 +1,4 @@
-# This Project was work for ubuntu 22.04 HWE
+# This Project was work in ubuntu 22.04 HWE
 
 The origin project has some device error,I fix it and upgrade some software for AMD 680M
 
@@ -80,21 +80,5 @@ Also visit the Homepage of the creator and consider Donating: https://owncast.on
 | GID | Group Identifier | 100 |
 | UMASK | Umask value | 0000 |
 | DATA_PERM | Data permissions for /owncast folder | 770 |
-
-## Run example
-```
-docker run --name Owncast -d \
-	-p 8080:8080/tcp \
-	-p 1935:1935/tcp \
-	--env 'OWNCAST_V=latest' \
-	--env 'UID=99' \
-	--env 'GID=100' \
-	--env 'UMASK=0000' \
-	--env 'DATA_PERM=770' \
-	--volume /mnt/cache/appdata/owncast:/owncast \
-	ich777/owncast
-```
-
-This Docker is mainly created for better use with Unraid, if you don't use Unraid you should definitely try it!
 
 #### Support Thread: https://forums.unraid.net/topic/83786-support-ich777-application-dockers/
